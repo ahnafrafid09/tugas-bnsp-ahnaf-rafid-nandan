@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitung Luas Segitiga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen flex items-center justify-center">
+      <div class="border border-black p-8">
+        <form id="triangleForm">
+          <h1 class="font-bold text-center text-xl mb-8">
+            Hitung Luas Segitiga
+          </h1>
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <!-- Untuk input alas -->
+              <label for="alas" class="w-40 text-sm font-medium text-gray-700"
+                >Alas</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="number"
+                id="alas"
+                name="alas"
+                class="ml-2 flex-1 border border-black rounded-md"
+                required
+              />
+            </div>
+            <div class="flex items-center">
+              <!-- Untuk input tinggi -->
+              <label for="tinggi" class="w-40 text-sm font-medium text-gray-700"
+                >Tinggi</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="number"
+                id="tinggi"
+                name="tinggi"
+                class="ml-2 flex-1 border border-black rounded-md"
+                required
+              />
+            </div>
+            <div class="flex justify-end gap-6 mt-6">
+              <button
+                type="button"
+                onclick="calculateArea()"
+                class="bg-indigo-600 text-white px-4 py-2 rounded-md"
+              >
+                Hitung Luas
+              </button>
+            </div>
+          </div>
+        </form>
+        <div id="result" class="text-xl mt-6">
+          <h1>Hasil Hitung:</h1>
+          <!-- Hasil akan ditampilkan di sini -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateArea() {
+        // Mendapatkan nilai input alas dan tinggi
+        const alas = parseFloat(document.getElementById("alas").value);
+        const tinggi = parseFloat(document.getElementById("tinggi").value);
+
+        // Rumus luas segitiga
+        if (!isNaN(alas) && !isNaN(tinggi) && alas > 0 && tinggi > 0) {
+          const luas = 0.5 * alas * tinggi;
+
+          //   Menampilkan hasil
+          document.getElementById(
+            "result"
+          ).innerHTML = `Hasil Hitung: <strong>${luas.toFixed(2)} cm²</strong>`;
+        } else {
+          document.getElementById("result").innerHTML =
+            "Harap masukkan nilai yang valid untuk alas dan tinggi.";
+        }
+      }
+
+      //   Fungsi klik button
+      document.querySelector("button").addEventListener("click", calculateArea);
+    </script>
+  </body>
+</html>

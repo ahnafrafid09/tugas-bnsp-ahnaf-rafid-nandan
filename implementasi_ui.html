@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="text-xl font-bold p-4">
+      <h1>Selamat Mengikuti Uji Kompetensi pada Skema Junior Web Programmer</h1>
+    </div>
+    <div class="flex items-center justify-center h-screen">
+      <div class="p-8 border border-black w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-8 text-center">Input Biodata</h1>
+
+        <form>
+          <div class="space-y-6">
+            <!-- NIK -->
+            <div class="flex items-center">
+              <label for="nik" class="w-40 text-sm font-medium text-gray-700"
+                >NIK</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="nik"
+                name="nik"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+
+            <!-- Nama -->
+            <div class="flex items-center">
+              <label for="nama" class="w-40 text-sm font-medium text-gray-700"
+                >Nama</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+
+            <!-- Tempat Lahir -->
+            <div class="flex items-center">
+              <label
+                for="tempat_lahir"
+                class="w-40 text-sm font-medium text-gray-700"
+                >Tempat Lahir</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="tempat_lahir"
+                name="tempat_lahir"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div class="flex items-center">
+              <label
+                for="tanggal_lahir"
+                class="w-40 text-sm font-medium text-gray-700"
+                >Tanggal Lahir</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="tanggal_lahir"
+                name="tanggal_lahir"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+            <div class="flex items-center">
+              <label
+                for="jenis_kelamin"
+                class="w-40 text-sm font-medium text-gray-700"
+                >Jenis Kelamin</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="jenis_kelamin"
+                name="jenis_kelamin"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+
+            <!-- Alamat -->
+            <div class="flex items-center">
+              <label for="alamat" class="w-40 text-sm font-medium text-gray-700"
+                >Alamat</label
+              >
+              <span class="w-6 text-center">:</span>
+              <input
+                type="text"
+                id="alamat"
+                name="alamat"
+                class="ml-2 flex-1 border border-black rounded-md"
+              />
+            </div>
+
+            <!-- Agama -->
+            <div class="flex items-center">
+              <label for="agama" class="w-40 text-sm font-medium text-gray-700"
+                >Agama</label
+              >
+              <span class="w-6 text-center">:</span>
+              <select
+                id="agama"
+                name="agama"
+                class="ml-2 flex-1 border border-black rounded-md"
+              >
+                <option value="">Pilih Agama</option>
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="konghucu">Konghucu</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex justify-center gap-6 mt-6">
+            <button
+              type="submit"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-md"
+            >
+              Kirim
+            </button>
+            <button
+              type="submit"
+              class="bg-red-600 text-white px-4 py-2 rounded-md"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
